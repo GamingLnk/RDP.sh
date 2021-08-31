@@ -22,33 +22,6 @@ else
     exit
 fi
 
-# Install Desktop Environment (XFCE4)
-printf "$g$b    Installing Desktop Environment $endc$enda" >&2
-{
-    sudo DEBIAN_FRONTEND=noninteractive \
-        apt install --assume-yes xfce4 desktop-base xfce4-terminal
-    sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
-    sudo apt remove --assume-yes gnome-terminal  
-    sudo apt install --assume-yes xscreensaver
-    sudo systemctl disable lightdm.service
-} &> /dev/null &&
-printf "\r$c$b    Desktop Environment Installed $endc$enda\n" >&2 ||
-{ printf "\r$r$b    Error Occured $endc$enda\n" >&2; exit; }
-
-
-
-# Install Google Chrome
-printf "$g$b    Installing Google Chrome $endc$enda" >&2
-{
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sudo dpkg --install google-chrome-stable_current_amd64.deb
-    sudo apt install --assume-yes --fix-broken
-} &> /dev/null &&
-printf "\r$c$b    Google Chrome Installed $endc$enda\n" >&2 ||
-printf "\r$r$b    Error Occured $endc$enda\n" >&2
-
-
-
 # Install CrossOver (Run exe on linux)
 printf "$g$b    Installing CrossOver $endc$enda" >&2
 {
