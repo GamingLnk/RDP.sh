@@ -1,9 +1,9 @@
 # remote-desktop
-Helps accessing your Linux machine via Chrome Remote Desktop.
+Helps accessing your online Jupyter notebook Linux machine via Chrome Remote Desktop.
 
-**For Linux Servers :**
+**For Google Colab and others :**
 
-1. open terminal-command.txt and run code in that one-by-one.
+1. Open machine.ipynb and click open in colab.
+2. Run cells one-by-one.
 
-
-You can also use machine.ipynb notebook document used by Jupyter Notebook on your server and also on Google Colab.
+You can also use machine.ipynb notebook document on your server and also on groomIDE.
