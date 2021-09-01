@@ -1,7 +1,0 @@
-To setup a Chrome Remote Desktop connection on you Debian Linux server,
-you can run these commands in your server terminal one-by-one :
-
-
-wget https://cdn.jsdelivr.net/gh/apix-loi/remote-desktop/server_exe.sh
-chmod +x ./server_exe.sh
-./server_exe.sh
